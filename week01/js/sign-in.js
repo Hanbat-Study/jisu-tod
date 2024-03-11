@@ -7,6 +7,11 @@ function init() {
         var pwData = signInElements[1].value;
         console.log("id : " + idData + " password : " + pwData);
     };
+
+    var signUpLink = document.getElementsByClassName("sign-up-link")[0];
+    signUpLink.onclick = () => {
+        console.log("회원가입 페이지로 이동");
+    }
 }
 
 init();

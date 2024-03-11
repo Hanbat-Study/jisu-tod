@@ -2,6 +2,11 @@ function init() {
     var signUpBtn = document.getElementById("signUpBtn");
 
     signUpBtn.onclick = signUp;
+
+    var signInLink = document.getElementsByClassName("sign-in-link")[0];
+    signInLink.onclick = () => {
+        console.log("로그인 페이지로 이동");
+    }
 }
 
 function signUp(e) {
