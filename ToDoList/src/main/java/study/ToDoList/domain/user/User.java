@@ -1,9 +1,6 @@
 package study.ToDoList.domain.user;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
@@ -14,6 +11,7 @@ import java.time.LocalDate;
 @Entity
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
     @Column(nullable = false)
@@ -30,7 +28,7 @@ public class User {
     @Column(nullable = false)
     private Hometown hometown;
 
-    @Column(nullable = false)
+    @Column(unique = true, nullable = false)
     private String loginId;
 
     @Column(nullable = false)
