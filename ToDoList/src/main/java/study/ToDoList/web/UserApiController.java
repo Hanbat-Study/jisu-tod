@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import study.ToDoList.domain.user.Gender;
 import study.ToDoList.domain.user.Hometown;
 import study.ToDoList.service.user.UserService;
+import study.ToDoList.web.dto.request.SigninRequestDto;
 import study.ToDoList.web.dto.request.SignupRequestDto;
 import study.ToDoList.web.dto.response.DefaultRes;
 
@@ -36,9 +37,10 @@ public class UserApiController {
     }
 
     @PostMapping("/api/user/signin")
-    public DefaultRes signin() {
-
-        return null;
+    public DefaultRes signin(@RequestParam String loginId, @RequestParam String password) {
+        return userService.signin(SigninRequestDto.builder()
+                .loginId(loginId)
+                .password(password).build());
     }
 
 }
