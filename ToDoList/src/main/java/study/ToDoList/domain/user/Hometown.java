@@ -1,6 +1,6 @@
 package study.ToDoList.domain.user;
 
 public enum Hometown {
-    SEOUL, Gyeonggi, Gangwon, Chungcheong, Jeolla, Gyeongsang, Incheon, Daejeon, Daegu, Gwangju, Ulsan,
-    Busan, Jeju;
+    SEOUL, GYEONGGI, GANGWON, CHUNGCHEONG, JEOLLA, GYEONGSANG, INCHEON, DAEJEON, DAEGU, GWANGJU, ULSAN,
+    BUSAN, JEJU;
 }
