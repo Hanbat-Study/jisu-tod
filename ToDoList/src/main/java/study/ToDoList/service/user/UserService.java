@@ -28,9 +28,8 @@ public class UserService {
     @Transactional
     public DefaultRes signin(SigninRequestDto signinRequestDto) {
         Optional<User> user = findByloginid(signinRequestDto.getLoginId());
-        System.out.println(user.get().getLoginid());
-        System.out.println(user.get().getPassword());
-        if(user == null || !signinRequestDto.getPassword().equals(user.get().getPassword()))
+
+        if(!user.isPresent() || !signinRequestDto.getPassword().equals(user.get().getPassword()))
             return DefaultRes.res(StatusCode.OK, "로그인 실패", null);
 
         return DefaultRes.res(StatusCode.OK, "로그인 성공", null);
