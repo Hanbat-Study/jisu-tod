@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <script src="./service/js/sign-up.js" defer></script>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="../js/sign-up.js" defer></script>
     <title>My To Do List</title>
   </head>
   <body>
@@ -16,26 +16,35 @@
       <section class="sign-up-page">
         <h3 class="title">회원가입</h3>
         <form id="signup" class="main-contents" action="">
-          <input class="sign-up-input" type="text" placeholder="이름">
+          <input class="sign-up-input" type="text" placeholder="이름" />
           <div class="sign-up-form-div">
-            <div class="text">
-              성별 : 
-            </div>
-            <input id="female" class="sign-up-input" type="radio" name="gender" title="여자" value="female" checked>
+            <div class="text">성별 :</div>
+            <input
+              id="female"
+              class="sign-up-input"
+              type="radio"
+              name="gender"
+              title="여자"
+              value="female"
+              checked
+            />
             <label for="female">여자</label>
-            <input id="male" class="sign-up-input" type="radio" name="gender" title="남자" value="male">
+            <input
+              id="male"
+              class="sign-up-input"
+              type="radio"
+              name="gender"
+              title="남자"
+              value="male"
+            />
             <label for="male">남자</label>
           </div>
           <div class="sign-up-form-div">
-            <div class="text">
-              생일 : 
-            </div>
-            <input class="sign-up-input" type="date">
+            <div class="text">생일 :</div>
+            <input class="sign-up-input" type="date" />
           </div>
           <div class="sign-up-form-div">
-            <div class="text">
-              고향 : 
-            </div>
+            <div class="text">고향 :</div>
             <select class="sign-up-input" name="hometown" id="hometown">
               <option value="서울">서울</option>
               <option value="경기">경기</option>
@@ -52,15 +61,13 @@
               <option value="제주">제주</option>
             </select>
           </div>
-          <input class="sign-up-input" type="text" name="id" placeholder="아이디">
-          <input class="sign-up-input" type="password" name="password" placeholder="비밀번호">
+          <input class="sign-up-input" type="text" name="id" placeholder="아이디" />
+          <input class="sign-up-input" type="password" name="password" placeholder="비밀번호" />
           <button id="signUpBtn" class="btns" type="button">회원가입</button>
-          <a class="link sign-in-link" href="./pages/sign-in.html">로그인하기</a>
+          <a class="link sign-in-link" href="./sign-in.html">로그인하기</a>
         </form>
       </section>
     </main>
-    <footer>
-      Copyright 2024-03-10 by Jisu Lee
-    </footer>
+    <footer>Copyright 2024-03-10 by Jisu Lee</footer>
   </body>
 </html>
