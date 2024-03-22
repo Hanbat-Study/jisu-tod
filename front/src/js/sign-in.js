@@ -1,3 +1,5 @@
+import { setCookie } from "./cookies";
+
 function init() {
   var signInBtn = document.getElementById("signInBtn");
 
@@ -5,8 +7,15 @@ function init() {
     var signInElements = e.target.parentNode.children;
     var idData = signInElements[0].value;
     var pwData = signInElements[1].value;
-    console.log("id : " + idData + " password : " + pwData);
+
+    if (valid(idData, pwData) === true) {
+      setCookie("loginToken", 1);
+      window.location.assign("");
+    } else {
+    }
   };
 }
+
+function valid() {}
 
 init();
