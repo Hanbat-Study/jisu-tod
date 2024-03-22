@@ -10,12 +10,15 @@ function init() {
 
     if (valid(idData, pwData) === true) {
       setCookie("loginToken", 1);
-      window.location.assign("");
+      window.location.assign("../todo.html");
     } else {
+      alert("아이디 또는 비밀번호가 잘못되었습니다.");
     }
   };
 }
 
-function valid() {}
+function valid(idData, pwData) {
+  window.localStorage.getItem()
+}
 
 init();

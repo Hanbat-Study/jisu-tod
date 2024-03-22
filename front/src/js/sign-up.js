@@ -22,7 +22,11 @@ function signUp(e) {
   signUpData["id"] = signUpDataElements[4].value;
   signUpData["password"] = signUpDataElements[5].value;
 
-  console.log(signUpData);
+  valid(signUpData);
+}
+
+function valid(signUpData) {
+  
 }
 
 init();
