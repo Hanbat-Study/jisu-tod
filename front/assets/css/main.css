@@ -64,6 +64,11 @@ main > section {
     margin-top: 7px;
 }
 
+#signUpBtn:disabled {
+    background-color: #4b4e53;
+    cursor: default;
+}
+
 .text, label {
     color: white;
     font-weight: 500;
